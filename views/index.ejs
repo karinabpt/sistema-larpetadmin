@@ -1,0 +1,65 @@
+<%- include("cabecalho.ejs") %>
+
+    <!-- Contéudo principal -->
+    <main class="flex-grow-1 container-fluid px-4">
+        <div class="row g-4">
+
+            <!-- Sidebar -->
+            <aside class="col-lg-2 d-none d-lg-block">
+                <div class="sidebar-ong p-3 shadow-sm">
+                    <a href="/" class="active"><i class="bi bi-speedometer2"></i> Dashboard</a>
+                    <a href="/abrigo/lst"><i class="bi bi-house-heart"></i> Abrigos</a>
+                    <a href="/animal/lst"><i class="bi bi-heart"></i> Animais</a>
+                    <a href="/adocao/lst"><i class="bi bi-clipboard-heart"></i> Adoções</a>
+                </div>
+            </aside>
+
+            <div class="col-lg-10">
+                <div class="mb-4">
+                    <p class="text-muted mb-3 fs-6">
+                        Bem-vindo ao LarPet Admin, uma ferramenta desenvolvida para auxiliar ONGs de causa animal na
+                        gestão de abrigos, animais e adoções, centralizando essas informações em um só lugar.
+                    </p>
+                </div>
+                <!-- Cabeçalho da página -->
+                <div class="page-header fs-6">
+                    <h1>Painel Geral</h1>
+                    <p>Visão geral dos abrigos, animais e adoções cadastrados</p>
+                </div>
+
+                <!-- Cards página inicial -->
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100 shadow p-3">
+                            <!-- Abrigos -->
+                            <h2 class="h5"><i class="bi bi-house-heart text-danger"></i> Abrigos</h2>
+                            <p class="text-muted">Cadastre e gerencie os abrigos parceiros</p>
+                            <a href="/abrigo/lst" class="btn btn-primary mt-auto">Gerenciar Abrigos</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100 shadow p-3">
+                            <!-- Animais -->
+                            <h2 class="h5"><i class="bi bi-heart text-danger"></i> Animais</h2>
+                            <p class="text-muted">Cadastre animais, vinculando-os a um abrigo e acompanhando seu
+                                status
+                                de adoção</p>
+                            <a href="/animal/lst" class="btn btn-primary mt-auto">Gerenciar Animais</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card p-4 h-100 shadow p-3">
+                            <!-- Adoções -->
+                            <h2 class="h5"><i class="bi bi-clipboard-heart text-danger"></i> Adoções</h2>
+                            <p class="text-muted">Registre e consulte quem adotou cada animal</p>
+                            <a href="/adocao/lst" class="btn btn-primary mt-auto">Gerenciar Adoções</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <%- include("rodape.ejs") %>
