@@ -22,15 +22,15 @@
                 <input type="text" minlength="3" maxlength="30" class="form-control" id="responsavel" name="responsavel" placeholder="Nome" value="<%= abrigo.responsavel || '' %>" required>
             </div>
             <div class="mb-3">
-                <label for="endereco" class="form-label">Endereço</label>
+                <label for="endereco" class="form-label">Endereço <span class="text-danger">*</span> </label>
                 <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Ex: Rua da Esperança, 123" value="<%= abrigo.endereco || '' %>" required>
             </div>
             <div class="mb-3">
-                <label for="cidade" class="form-label">Cidade</label>
+                <label for="cidade" class="form-label">Cidade <span class="text-danger">*</span> </label>
                 <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Ex: Novo Hamburgo - RS" value="<%= abrigo.cidade || '' %>" required>
             </div>
             <div class="mb-3">
-                <label for="telefone" class="form-label">Telefone</label>
+                <label for="telefone" class="form-label">Telefone <span class="text-danger">*</span> </label>
                 <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" value="<%= abrigo.telefone || '' %>" required>
             </div>
             <div class="d-flex gap-2">
