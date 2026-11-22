@@ -1,0 +1,45 @@
+<%- include("../cabecalho.ejs") %>
+
+<main class="flex-grow-1 container py-3">
+
+    <div class="page-header mb-4">
+        <h1><i class="bi bi-plus-circle"></i> Novo Abrigo</h1>
+        <p class="text-muted">Cadastre um novo abrigo parceiro da ONG</p>
+    </div>
+
+    <% if (erro) { %>
+        <div class="alert alert-danger"><%= erro %></div>
+    <% } %>
+
+    <div class="card p-4 shadow-sm">
+        <form method="post" action="/abrigo/add/ok" autocomplete="off">
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do abrigo <span class="text-danger">*</span></label>
+                <input type="text" minlength="3" maxlength="30" class="form-control" id="nome" name="nome" placeholder="Ex: Lar animal" value="<%= abrigo.nome || '' %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="responsavel" class="form-label">Nome do responsável <span class="text-danger">*</span></label>
+                <input type="text" minlength="3" maxlength="30" class="form-control" id="responsavel" name="responsavel" placeholder="Nome" value="<%= abrigo.responsavel || '' %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" name="endereco" placeholder="Ex: Rua da Esperança, 123" value="<%= abrigo.endereco || '' %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="cidade" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Ex: Novo Hamburgo - RS" value="<%= abrigo.cidade || '' %>" required>
+            </div>
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" value="<%= abrigo.telefone || '' %>" required>
+            </div>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg"></i> Cadastrar Abrigo</button>
+                <a href="/abrigo/lst" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+
+</main>
+
+<%- include("../rodape.ejs") %>
